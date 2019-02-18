@@ -1,4 +1,5 @@
-repo
-====
+This app was desgined to guide musicians to creative glory.
 
-Project Description
+It is still a work in progress.
+
+Requires 'npm install' in directory upon cloning.
