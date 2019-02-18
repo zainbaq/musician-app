@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-weight:400;
+    background:'grey';
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #374144;
+
+}
+/* Global */
+.container {
+    width:85%;
+    margin:0 auto
+}
+
+header {
+    background: #42c5f4
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear:both;
+}
+
+nav {
+    float:right;
+}
+
+nav ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+nav li {
+    display:inline-block;
+    margin-left: 50px;
+    padding-top:20px;
+    padding-bottom: 20px;
+
+    position:relative;
+}
+
+nav a {
+    color:#374144;
+    text-decoration: none;
+}
+
+.logo {
+    float: left;
+}
+
+nav a:hover {
+    color:#fff;
+}
+
+nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: #f1f1f1 ;
+
+    position: absolute;
+    bottom:0;
+    width: 0%;
+
+    transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before {
+    width:100%;
+}
+
+.home_buttons {
+    margin-top:50px;
+    
+}
+
+.jumbotron p{
+    color: #ffffff;
+    margin-top:80px;
+    text-align:center;
+}
+
+.footer {
+    margin-top:100px;
+    font:12px;
+    text-align:center;
+    color:#ffffff;
+}
+
+#button {
+    padding:0;
+    background:none;
+    border:none;
+    margin-top:50%;
+    font-size: 16px;
+    
+    align-content:center;
+    margin-left:50%;
+}
+
+.container-2{
+    margin-top:70px;
+    width:20%;
+    height:40%;
+    background-color:#42c5f4;
+    display: inline-block;
+    margin-left:60px;
+
+    position: relative;
+    
+}
