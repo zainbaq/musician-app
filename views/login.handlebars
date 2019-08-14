@@ -3,11 +3,14 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<title>Music App</title>
 
-    {{>facebook}}
-    <script src="/js/facebook.js"></script>
+    
 
 </head>
 <body>
+    {{>facebook}}
+    <script src="/js/facebook.js"></script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=2283141021805552&autoLogAppEvents=1"></script>
 <header>
 	
     <div class="container">
@@ -20,7 +23,7 @@
                 {{!-- <li><a href="tools">Tools</a></li> --}}
                 <li><a href="/about">About</a></li>
                 {{!-- <li><a href="/login">Login</a></li> --}}
-                <li><a href="#">Sign Up</a></li>
+                {{!-- <li><a href="#">Sign Up</a></li> --}}
 
             </li>
             </ul>
@@ -34,14 +37,15 @@
 	</div>
 </h2>
 
-
+{{!-- 
 <div class="facebookLogin">
     Please login through facebook
     <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+</div> --}}
 
+<div id="fb-login-box">
+    <div class="fb-login-button" data-width="" data-onlogin="checkLoginState();" data-size="large" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="false"></div>
 </div>
-
-
 
 <div class="footer">
 	<p> This application is being developed to aid musicians on the quest to creative glory.</p>

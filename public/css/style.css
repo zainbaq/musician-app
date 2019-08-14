@@ -121,3 +121,9 @@ nav a:hover::before {
     padding: 20px;
     margin-top: 20px;
 }
+
+#fb-login-box {
+    margin:0 auto;
+    text-align:center;
+    align-self: center;
+}
