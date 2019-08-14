@@ -111,3 +111,13 @@ nav a:hover::before {
     position: relative;
     
 }
+
+.aboutBox {
+    width:auto;
+    background-color:#5b808f;
+    /* margin-left: 30%; */
+    text-align: center;
+    align-self: center;
+    padding: 20px;
+    margin-top: 20px;
+}
