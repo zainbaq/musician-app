@@ -107,7 +107,7 @@ nav a:hover::before {
     background-color:#42c5f4;
     display: inline-block;
     margin-left:60px;
-
+    border-radius:35px;
     position: relative;
     
 }

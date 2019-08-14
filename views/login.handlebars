@@ -2,6 +2,10 @@
 <head>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<title>Music App</title>
+
+    {{>facebook}}
+    <script src="/js/facebook.js"></script>
+
 </head>
 <body>
 <header>
@@ -15,32 +19,32 @@
                 <li><a href="/">Home</a></li>
                 {{!-- <li><a href="tools">Tools</a></li> --}}
                 <li><a href="/about">About</a></li>
-                <li><a href="/login">Login</a></li>
+                {{!-- <li><a href="/login">Login</a></li> --}}
                 <li><a href="#">Sign Up</a></li>
 
             </li>
             </ul>
         </nav>
     </div>
-</header>
+    </header>
 
 <h2>
 	<div class="jumbotron">
-		<p>About Us</p>
+		<p>Login</p>
 	</div>
 </h2>
 
-<p>
-	Blah blah blah blah bklaj Blah blah blah blah bklaj Blah blah blah blah bklaj
-	Blah blah blah blah bklaj Blah blah blah blah bklaj Blah blah blah blah bklaj
-	Blah blah blah blah bklaj Blah blah blah blah bklaj Blah blah blah blah bklaj
-	Blah blah blah blah bklaj Blah blah blah blah bklaj Blah blah blah blah bklaj
-	Blah blah blah blah bklaj Blah blah blah blah bklaj Blah blah blah blah bklaj
-</p>
+
+<div class="facebookLogin">
+    Please login through facebook
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+
+</div>
+
 
 
 <div class="footer">
-	<p> This application was developed to aid musicians on the quest to creative glory.</p>
+	<p> This application is being developed to aid musicians on the quest to creative glory.</p>
 </div>
 
 </body>
