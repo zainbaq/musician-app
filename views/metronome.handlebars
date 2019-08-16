@@ -1,7 +1,7 @@
 <html>
 <head>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
-	<title>Music App</title>
+	<title>TrebleClef</title>
 
 	<script src="soundmanager2.js"></script>
 	<script src="../public/js/metronome.js" type="text/javascript"></script>
@@ -20,7 +20,6 @@
                 <li><a href="/about">About</a></li>
                 <li><a href="/login">Login</a></li>
                 {{!-- <li><a href="#">Sign Up</a></li> --}}
-
             </li>
             </ul>
         </nav>
@@ -53,21 +52,30 @@
 <script>
 
     var tick = document.getElementById("met-tick");
-    met = setInterval();
-    var end_met = false;
+    met = setInterval(); //  Creates interval object
+    // Method to stop the metronome
     function stop() {
         clearInterval(met);
     };
+    // Method to start the metronome
     function metronome() {
         var bpm = document.getElementById("bpm_val").value;
         if (bpm == "") {
             alert("Please enter a BPM value.");
+            /* Maybe change this if statement to JQuery action 
+            to simply append HTML child node instead of an
+            alert */
         }
-        var tick_rate = 1/(bpm/60); // Seconds per tick
+        var tick_rate = 1/(bpm/60); // Seconds per beat
         met(tick.play(), tick_rate*1000);
     };
-
+    // Event methods
     document.getElementById("start-button").onclick = metronome();
     document.getElementById("stop-button").onclick = stop();
+
 </script>
+
+
+
+
 </html>
