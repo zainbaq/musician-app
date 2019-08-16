@@ -53,13 +53,16 @@
 <script>
 
     var tick = document.getElementById("met-tick");
-    met = setTimeout();
-
+    met = setInterval();
+    var end_met = false;
     function stop() {
-        clearTimeout(met);
+        clearInterval(met);
     };
     function metronome() {
         var bpm = document.getElementById("bpm_val").value;
+        if (bpm == "") {
+            alert("Please enter a BPM value.");
+        }
         var tick_rate = 1/(bpm/60); // Seconds per tick
         met(tick.play(), tick_rate*1000);
     };
