@@ -1,17 +1,15 @@
-
-const metronome_tick = new Audio('/public/assets/audio/metronome_sound.mp3');
+var tick = document.getElementById("met-tick");
+met = setTimeout();
 
 function stop() {
-    alert("stop button working!")
-    clearTimeout(met)
-}
+    clearTimeout(met);
+};
 function metronome() {
-    alert("start button working!")
-    var bpm = document.getElementById("bpm_val");
+    alert("!")
+    var bpm = document.getElementById("bpm_val").value;
     var ticks_per_second = bpm/60;
-    met = setTimeout(metronome_tick.play(), ticks_per_second*1000);
-    met();
-}
+    met(tick.play(), ticks_per_second*1000);
+};
 
-document.getElementById("start-button").addEventListener("click", metronome());
-document.getElementById("stop-button").addEventListener("click", stop());
+document.getElementById("start-button").onclick = metronome();
+document.getElementById("stop-button").onclick = stop();
