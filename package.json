@@ -14,9 +14,11 @@
   "dependencies": {
     "express": "^3.21.2",
     "express3-handlebars": "^0.5.2",
+    "jquery": "^3.4.1",
     "microphone-js": "^0.1.1",
     "mongodb": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "soundmanager2": "^2.97.20170602"
   },
   "engines": {
     "node": "8.9.x"

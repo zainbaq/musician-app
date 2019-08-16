@@ -2,6 +2,9 @@
 <head>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<title>Music App</title>
+
+	<script src="soundmanager2.js"></script>
+	<script src="../public/js/metronome.js" type="text/javascript"></script>
 </head>
 <body>
 <header>
@@ -30,39 +33,33 @@
 	</div>
 </h2>
 
-{{!-- <div class="container_3">
-	<ul>
-		<div class="container-2">
-			<div class="home_buttons">
-				<button type="Tuner" id="button">Tuner</button>
-				<!-- INCLUDE BUTTON IMAGE HERE -->
-			</div>
-		</div>
-		<div class="container-2">
-			<div class="home_buttons">
-				<button type="Metronome" id="button">Metronome</button>
-				<!-- INCLUDE BUTTON IMAGE HERE -->
-			</div>
-		</div>
-		<div class="container-2">
-			<div class="home_buttons">
-				<button type="Notebook" id="button">Notebook</button>
-				<!-- INCLUDE BUTTON IMAGE HERE -->
-			</div>
-		</div>
-		<div class="container-2">
-			<div class="home_buttons">
-				<button type="Learn" id="button">Learn</button>
-				<!-- INCLUDE BUTTON IMAGE HERE -->
-			</div>
-		</div>
-	</ul>
-</div> --}}
-
+<form id="bpm">
+	BPM: <input type="text" name="bpm_val" id="bpm_val"><br>
+	<button class="met-buttons" type="button" id="start-button"
+	onclick="metronome()">Start</button>
+	<button class="met-buttons" type="button" id="stop-button"
+	onclick="stop()">Stop</button>
+</form>
 
 <div class="footer">
-	<p> This application was developed to aid musicians on the quest to creative glory.</p>
+	<p> This application is being developed to aid musicians on the quest to creative glory.</p>
 </div>
 
 </body>
+<script>
+
+    const metronome_tick = new Audio('/public/assets/audio/metronome_sound.mp3');
+    met = setTimeout();
+    function stop() {
+        clearTimeout(met);
+    };
+    function metronome() {
+        var bpm = document.getElementById("bpm_val").value;
+        var ticks_per_second = bpm/60;
+        met(metronome_tick.play(), ticks_per_second*1000);
+    };
+
+    document.getElementById("start-button").onclick = metronome();
+    document.getElementById("stop-button").onclick = stop();
+</script>
 </html>
