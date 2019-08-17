@@ -150,4 +150,15 @@ input {
 .met-buttons {
     text-align:center;
     margin-top:10px;
+    padding: 5px;
+    margin-left:10px;
+}
+
+#tune-box {
+    padding:20px;
+    background-color:#5b808f;
+    margin-left:25%;
+    margin-right:25%;
+    height:50%;
+    border-radius:35px;
 }

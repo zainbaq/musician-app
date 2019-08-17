@@ -1,4 +1,43 @@
-note_frequencies = {
+
+fundamental_frequencies = {
+    C : 16.35,
+    Cb : 17.32,
+    D : 18.35,
+    Eb : 19.45,
+    E : 20.60,
+    F : 21.83,
+    Gb : 23.12,
+    G : 24.50,
+    Ab : 25.96,
+    A : 27.50,
+    Bb : 29.14,
+    B : 30.87,
+}
+
+function get_nth_octave(base_freqs, n) {
+
+    multiple = Math.pow(2,n);
+    nth_octave = {
+        C : multiple * base_freqs['C'],
+        Cb : multiple * base_freqs['Cb'],
+        D : multiple * base_freqs['D'],
+        Eb : multiple * base_freqs['Eb'],
+        E : multiple * base_freqs['E'],
+        F : multiple * base_freqs['F'],
+        Gb : multiple * base_freqs['Gb'],
+        G : multiple * base_freqs['G'],
+        Ab : multiple * base_freqs['Ab'],
+        A : multiple * base_freqs['A'],
+        Bb : multiple * base_freqs['Bb'],
+        B : multiple * base_freqs['B']
+    };
+    return nth_octave
+}
+
+console.log(get_nth_octave(fundamental_frequencies, 2))
+
+// Hard coded note frequencies for 8 octaves
+note_frequencies_hard = {
     C0 : 16.35,
     Cb_0 : 17.32,
     D0 : 18.35,
@@ -64,53 +103,56 @@ note_frequencies = {
     Bb_4 : 466.16,
     B4 : 493.88,
 
-    ///////////////////////////////////
-    C5 : 16.35,
-    Cb_5 : 17.32,
-    D5 : 18.35,
-    Eb_5 : 19.45,
-    E5 : 20.60,
-    F5 : 21.83,
-    Gb_5 : 23.12,
-    G5 : 24.50,
-    Ab_5 : 25.96,
-    A5 : 27.50,
-    Bb_5 : 29.14,
+    C5 : 523.25,
+    Cb_5 : 554.37,
+    D5 : 587.33,
+    Eb_5 : 622.25,
+    E5 : 659.25,
+    F5 : 698.46,
+    Gb_5 : 739.99,
+    G5 : 783.99,
+    Ab_5 : 830.61,
+    A5 : 880.00,
+    Bb_5 : 932.33,
+    B5 : 987.77,
 
-    C6 : 16.35,
-    Cb_6 : 17.32,
-    D6 : 18.35,
-    Eb_6 : 19.45,
-    E6 : 20.60,
-    F6 : 21.83,
-    Gb_6 : 23.12,
-    G6 : 24.50,
-    Ab_6 : 25.96,
-    A6 : 27.50,
-    Bb_6 : 29.14,
+    C6 : 1046.50,
+    Cb_6 : 1108.73,
+    D6 : 1174.66,
+    Eb_6 : 1244.51,
+    E6 : 1318.51,
+    F6 : 1396.91,
+    Gb_6 : 1479.98,
+    G6 : 1567.98,
+    Ab_6 : 1661.22,
+    A6 : 1760.00,
+    Bb_6 : 1864.66,
+    B6 : 1975.53,
 
-    C7 : 16.35,
-    Cb_7 : 17.32,
-    D7 : 18.35,
-    Eb_7 : 19.45,
-    E7 : 20.60,
-    F7 : 21.83,
-    Gb_7 : 23.12,
-    G7 : 24.50,
-    Ab_7 : 25.96,
-    A7 : 27.50,
-    Bb_7 : 29.14,
+    C7 : 2093.00,
+    Cb_7 : 2217.46,
+    D7 : 2349.32,
+    Eb_7 : 2489.02,
+    E7 : 2637.02,
+    F7 : 2793.83,
+    Gb_7 : 2959.96,
+    G7 : 3135.96,
+    Ab_7 : 3322.44,
+    A7 : 3520.00,
+    Bb_7 : 3729.31,
+    B7 : 3951.07,
 
-    C8 : 16.35,
-    Cb_8 : 17.32,
-    D8 : 18.35,
-    Eb_8 : 19.45,
-    E8 : 20.60,
-    F8 : 21.83,
-    Gb_8 : 23.12,
-    G8 : 24.50,
-    Ab_8 : 25.96,
-    A8 : 27.50,
-    Bb_8 : 29.14,
+    C8 : 4186.01,
+    Cb_8 : 4434.92,
+    D8 : 4698.63,
+    Eb_8 : 4978.63,
+    E8 : 5274.04,
+    F8 : 5587.65,
+    Gb_8 : 5919.91,
+    G8 : 6271.93,
+    Ab_8 : 6644.88,
+    A8 : 7040.00,
+    Bb_8 : 7458.62,
+    B8 : 7902.13
+};
 
-}
